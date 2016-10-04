@@ -1,0 +1,67 @@
+<!-- <px-context-browser
+        browser-context='{{initialContexts}}'
+        handlers="ngScope:handlers"
+        opened-item-name="{{initialContextName}}"
+        show-chevron="true">
+	<px-deck-selector ng-bind-polymer decks="{{decks}}" selected-deck="{{selectedDeck}}" ></px-deck-selector>
+</px-context-browser>
+
+<px-dashboard view-service-base-url="{{viewServiceBaseUrl}}" selected-deck-id="{{selectedDeck.id}}" context="{{context}}"></px-dashboard>
+ -->
+ 
+ 
+ <div class="col-md-5 pull-right text-right ">
+ 	<ul class="dash_op">
+	  	<li class="active"><a href="#tab1" data-toggle="tab">All</a></li>
+		<li><a href="#tab2" data-toggle="tab">compliant</a></li>
+		<li><a href="#tab3" data-toggle="tab">Non-compliant</a></li>
+	</ul>
+ 	 
+ </div>
+ <div class="clearfix"></div>
+<div class="col-md-12 tab-content">
+	<div class="tab-pane active" id="tab1">
+		<div class="col-md-3 greeon_box">
+			<h4 class="box_text">Process Stack Emission</h4>
+			<span class="green_box_title">wave soldering machine</span>
+			<p  class="clear_b"><span class="pull-left span_text">S02</span><span class="pull-right span1_text">83 ppb</span></p>
+			<p  class="clear_b"><span class="pull-left span_text">N02</span><span class="pull-right span1_text">8 ppb</span></p>
+			<p  class="clear_b"><span class="pull-left span_text">PM 2.5</span><span class="pull-right span1_text">63 ppb</span></p>		
+		</div>
+		<div class="col-md-3 orange_box">
+			<h4 class="box_text">Energy Consumption</h4>
+			<span class="orange_box_title">SMT line 1</span>
+			<p  class="clear_b"><span class="pull-left span_text">Daily limit</span><span class="pull-right span1_text">Today</span></p>
+			<p  class="clear_b"><span class="pull-left span_text">90 kwh</span><span class="pull-right orange_text">91 kwh</span></p>
+					
+		</div>
+		<div class="col-md-3 blue_box">
+			<h4 class="box_text">Water Consumption</h4>
+			<span class="blue_box_title">Industrial Use</span>
+			<p  class="clear_b"><span class="pull-left span_text">Daily limit</span><span class="pull-right span1_text">Today</span></p>
+			<p  class="clear_b"><span class="pull-left span_text">90 kwh</span><span class="pull-right blue_text">7 kwh</span></p>
+					
+		</div>
+		<div class="col-md-3 darkg_box">
+			<h4 class="box_text">Industrial hygiene</h4>
+			<span class="darkg_box_title">SMT line 1</span>
+			<p  class="clear_b"><span class="pull-left span_text">Temprature</span><span class="pull-right span1_text">27 <sup>0</sup>c</span></p>
+			<p  class="clear_b"><span class="pull-left span_text">Humidity</span><span class="pull-right span1_text">25 %</span></p>
+			<p  class="clear_b"><span class="pull-left span_text">Noise</span><span class="pull-right span1_text">68 db</span></p>		
+		</div>
+	</div>
+	<div class="tab-pane" id="tab2">
+		<div class="col-md-3">5</div>
+		<div class="col-md-3">6</div>
+		<div class="col-md-3">7</div>
+		<div class="col-md-3">8</div>
+	</div>
+	<div class="tab-pane" id="tab3">
+		<div class="col-md-3">9</div>
+		<div class="col-md-3">10</div>
+		<div class="col-md-3">11</div>
+		<div class="col-md-3">12</div>
+	</div>
+</div>
+
+	

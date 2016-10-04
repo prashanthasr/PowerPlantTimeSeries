@@ -1,0 +1,29 @@
+#inherit: base-manifest.yml
+applications:
+  - name: srp-rmd-datasource
+    buildpack: java_buildpack
+    path: target/srp-rmd-datasource-2.0.0.jar
+    memory: 1GB
+    instances: 1
+    services:
+        - asset_data_srv
+        - powerplant_timeseries_srv
+        - uaa_asset_srv
+       # - unittest_rmd_acs
+
+env:
+    predix_asset_name: asset_data_srv
+    predix_timeseries_name : powerplant_timeseries_srv
+    predix_oauth_restHost : 3f6071f6-d0c3-4541-b83e-2a7f29f024e7.predix-uaa.run.aws-usw02-pr.ice.predix.io
+    predix_oauth_clientId : client1:admin
+    predix_timeseries_connectionTimeout : 5000
+    predix_asset_connectionTimeout : 5000
+    predix_rest_socketTimeout : 5000
+    predix_rest_poolMaxSize: 200
+    predix_timeseries_ws_retry_attempt: 1
+    #used by predix acs-spring-security-extensions
+    accessTokenEndpointUrl : https://3f6071f6-d0c3-4541-b83e-2a7f29f024e7.predix-uaa.run.aws-usw02-pr.ice.predix.io/oauth/token
+    clientId : client1
+    clientSecret: admin
+    #used by predix uaa-token-lib
+    trustedIssuerIdsRegexPattern : ^https://(.*\\.)?predix-uaa.run.aws-usw02-pr.ice.predix.io/oauth/token$ 

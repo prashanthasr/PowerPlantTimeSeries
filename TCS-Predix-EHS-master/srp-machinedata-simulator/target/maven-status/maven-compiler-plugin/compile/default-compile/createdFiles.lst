@@ -1,0 +1,17 @@
+com\ge\predix\solsvc\machinedata\simulator\vo\AQIAttributesVO.class
+com\ge\predix\solsvc\machinedata\simulator\vo\PowerPlantAssetAttribute.class
+com\ge\predix\solsvc\machinedata\simulator\MachineDataSimulator$1.class
+com\ge\predix\solsvc\machinedata\simulator\boot\MachinedataSimulatorApplication.class
+com\ge\predix\solsvc\machinedata\simulator\JSONData.class
+com\ge\predix\solsvc\machinedata\simulator\vo\HygeineBody.class
+com\ge\predix\solsvc\machinedata\simulator\vo\HygeineObjectVO.class
+com\ge\predix\solsvc\machinedata\simulator\config\Constants.class
+com\ge\predix\solsvc\machinedata\simulator\MapperService.class
+com\ge\predix\solsvc\machinedata\simulator\config\Constants$Range.class
+com\ge\predix\solsvc\machinedata\simulator\vo\AQIBody.class
+com\ge\predix\solsvc\machinedata\simulator\ApplicationProperties.class
+com\ge\predix\solsvc\machinedata\simulator\vo\HygeineAtrributesVO.class
+com\ge\predix\solsvc\machinedata\simulator\vo\AQIObjectVO.class
+com\ge\predix\solsvc\machinedata\simulator\config\Constants$Parameter.class
+com\ge\predix\solsvc\machinedata\simulator\MachineDataSimulator.class
+com\ge\predix\solsvc\machinedata\simulator\config\Constants$Hygiene.class

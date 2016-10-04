@@ -1,0 +1,363 @@
+
+<div class="col-md-8 pull-right text-right ">
+	<ul class="air_op">
+		<li class="active"><a href="#tab2" data-toggle="tab"
+			ng-click="graphFunction('x1')">SMT Area</a></li>
+		<li><a href="#tab3" data-toggle="tab"
+			ng-click="graphFunction('x2')">Production Ground floor</a></li>
+		<li><a href="#tab4" data-toggle="tab"
+			ng-click="graphFunction('x3')">Near Soldering Machine</a></li>
+	</ul>
+
+</div>
+<div class="tab-content">
+
+	<div class="tab-pane active" id="tab2">
+		<div class="col-md-4">
+			<h4>Indoor Air quality</h4>
+		</div>
+		<div class="clearfix"></div>
+		<div class="bgwhitw_1">
+			<div class="col-md-6" style="padding-top: 10px;">
+				<div id="SMT_AQI" class="CampaignPercent" ng-click="sub_graph();"
+					style="height: 230px;"></div>
+			</div>
+
+			<div class="col-md-3">
+				<div id="chart3" class="c3"></div>
+			</div>
+			<div class="col-md-3 paddL0">
+				<h4 class="status_txt">Status</h4>
+				<h2 class="stis_sta">Satisfactory</h2>
+				<h6 class="prami_txt">Prominent pollutant: NO2</h6>
+
+			</div>
+		</div>
+
+	</div>
+	<div class="tab-pane" id="tab3">
+		<div class="col-md-4">
+			<h4>Indoor Air quality</h4>
+		</div>
+		<div class="clearfix"></div>
+		<div class="bgwhitw_1">
+			<div class="col-md-6" style="padding-top: 10px;">
+				<div id="PGF_AQI" class="CampaignPercent" ng-click="sub_graph();"
+					style="height: 230px;"></div>
+			</div>
+
+			<div class="col-md-3">
+				<div id="chart_3" class="c3"></div>
+			</div>
+			<div class="col-md-3 paddL0">
+				<h4 class="status_txt">Status</h4>
+				<h2 class="stis_sta">Satisfactory</h2>
+				<h6 class="prami_txt">Praminent pollutant: NO2</h6>
+
+			</div>
+		</div>
+
+	</div>
+	<div class="tab-pane " id="tab4">
+		<div class="col-md-4">
+			<h4>Indoor Air quality</h4>
+		</div>
+		<div class="clearfix"></div>
+		<div class="bgwhitw_1">
+			<div class="col-md-6" style="padding-top: 10px;">
+				<div id="NSM_AQI" class="CampaignPercent" ng-click="sub_graph();"
+					style="height: 230px;"></div>
+			</div>
+
+			<div class="col-md-3">
+				<div id="chart_2" class="c3"></div>
+			</div>
+			<div class="col-md-3 paddL0">
+				<h4 class="status_txt">Status</h4>
+				<h2 class="stis_sta">Satisfactory</h2>
+				<h6 class="prami_txt">Prominent pollutant: NO2</h6>
+
+			</div>
+		</div>
+
+	</div>
+</div>
+<div class="clearfix marB10"></div>
+<div class="col-md-9 pull-right text-right ">
+	<ul class="air_op pull-right marL0px">
+		<li class="active "><a href="#sub_tab11" data-toggle="tab">Heller
+				Machine</a></li>
+		<li class=""><a href="#sub_tab12" data-toggle="tab">Soltech
+				Machine</a></li>
+		<li class=" "><a href="#sub_tab3" data-toggle="tab">Relfow
+				Oven</a></li>
+		<li class=" "><a href="#sub_tab4" data-toggle="tab">Wave
+				Soldering Machine</a></li>
+
+	</ul>
+</div>
+<div class="tab-content">
+	<div class="tab-pane active" id="sub_tab11">
+		<div class="col-md-3">
+			<h4>Process Stack Emission</h4>
+		</div>
+		<div class="clearfix"></div>
+		<div class="bgwhitw_1">
+			<div class="col-md-6" ng-click="sub_para();">
+				<h4 class="prami_txt">
+					<span class="paddLR10 pse_txt">SO2</span><span
+						class="paddLR10 clrorg"><i class="fa fa-arrow-up"
+						aria-hidden="true"></i></span><span class="paddLR10">{{Heller_no2}}
+						ppb</span>
+				</h4>
+				<h4 class="prami_txt">
+					<span class="paddLR10 pse_txt">NO2</span><span
+						class="paddLR10 clrgr"><i class="fa fa-arrow-up"
+						aria-hidden="true"></i></span><span class="paddLR10">1 ppb</span>
+				</h4>
+				<h4 class="prami_txt">
+					<span class="paddLR10 pse_txt">PM2.5</span><span
+						class="paddLR10 clrorg"><i class="fa fa-arrow-up"
+						aria-hidden="true"></i></span><span class="paddLR10">50 ug/m3</span>
+				</h4>
+			</div>
+
+			<div class="col-md-3">
+				<img src="images/machine.jpg">
+			</div>
+			<div class="col-md-3 paddL0">
+				<h4 class="status_txt">Status</h4>
+				<h2 class="warn_sta">Warning</h2>
+
+			</div>
+		</div>
+	</div>
+	<div class="tab-pane" id="sub_tab12">
+		<div class="col-md-3">
+			<h4>Process Stack Emission1</h4>
+		</div>
+		<div class="clearfix"></div>
+		<div class="bgwhitw_1">
+			<div class="col-md-6">
+				<h4 class="prami_txt">
+					<span class="paddLR10 pse_txt">SO2</span><span
+						class="paddLR10 clrorg"><i class="fa fa-arrow-up"
+						aria-hidden="true"></i></span><span class="paddLR10">80 ppb</span>
+				</h4>
+				<h4 class="prami_txt">
+					<span class="paddLR10 pse_txt">NO2</span><span
+						class="paddLR10 clrgr"><i class="fa fa-arrow-up"
+						aria-hidden="true"></i></span><span class="paddLR10">5 ppb</span>
+				</h4>
+				<h4 class="prami_txt">
+					<span class="paddLR10 pse_txt">PM2.5</span><span
+						class="paddLR10 clrorg"><i class="fa fa-arrow-up"
+						aria-hidden="true"></i></span><span class="paddLR10">60 ug/m3</span>
+				</h4>
+			</div>
+
+			<div class="col-md-3">
+				<img src="images/soltech_machine (1).png">
+			</div>
+			<div class="col-md-3 paddL0">
+				<h4 class="status_txt">Status</h4>
+				<h2 class="warn_sta">Warning</h2>
+
+			</div>
+		</div>
+
+
+
+	</div>
+	<div class="tab-pane" id="sub_tab3">
+		<div class="col-md-3">
+			<h4>Process Stack Emission1</h4>
+		</div>
+		<div class="clearfix"></div>
+		<div class="bgwhitw_1">
+			<div class="col-md-6">
+				<h4 class="prami_txt">
+					<span class="paddLR10 pse_txt">SO2</span><span
+						class="paddLR10 clrorg"><i class="fa fa-arrow-up"
+						aria-hidden="true"></i></span><span class="paddLR10">90 ppb</span>
+				</h4>
+				<h4 class="prami_txt">
+					<span class="paddLR10 pse_txt">NO2</span><span
+						class="paddLR10 clrgr"><i class="fa fa-arrow-up"
+						aria-hidden="true"></i></span><span class="paddLR10">2 ppb</span>
+				</h4>
+				<h4 class="prami_txt">
+					<span class="paddLR10 pse_txt">PM2.5</span><span
+						class="paddLR10 clrorg"><i class="fa fa-arrow-up"
+						aria-hidden="true"></i></span><span class="paddLR10">60 ug/m3</span>
+				</h4>
+			</div>
+
+			<div class="col-md-3">
+				<img src="images/reflow_oven.png">
+			</div>
+			<div class="col-md-3 paddL0">
+				<h4 class="status_txt">Status</h4>
+				<h2 class="warn_sta">Warning</h2>
+
+			</div>
+		</div>
+
+
+
+	</div>
+	<div class="tab-pane" id="sub_tab4">
+		<div class="col-md-3">
+			<h4>Process Stack Emission</h4>
+		</div>
+		<div class="clearfix"></div>
+		<div class="bgwhitw_1">
+			<div class="col-md-6">
+				<h4 class="prami_txt">
+					<span class="paddLR10 pse_txt">SO2</span><span
+						class="paddLR10 clrorg"><i class="fa fa-arrow-up"
+						aria-hidden="true"></i></span><span class="paddLR10">50 ppb</span>
+				</h4>
+				<h4 class="prami_txt">
+					<span class="paddLR10 pse_txt">NO2</span><span
+						class="paddLR10 clrgr"><i class="fa fa-arrow-up"
+						aria-hidden="true"></i></span><span class="paddLR10">60 ppb</span>
+				</h4>
+				<h4 class="prami_txt">
+					<span class="paddLR10 pse_txt">PM2.5</span><span
+						class="paddLR10 clrorg"><i class="fa fa-arrow-up"
+						aria-hidden="true"></i></span><span class="paddLR10">0 ug/m3</span>
+				</h4>
+			</div>
+
+			<div class="col-md-3">
+				<img src="images/wave_soldering_machine.png">
+			</div>
+			<div class="col-md-3 paddL0">
+				<h4 class="status_txt">Status</h4>
+				<h2 class="warn_sta">Warning</h2>
+
+			</div>
+		</div>
+
+
+
+	</div>
+</div>
+
+
+<script>
+	var chart = c3.generate({
+		bindto : '#chart3',
+		data : {
+
+			columns : [ [ 'data', 77 ] ],
+
+			type : 'gauge',
+			onclick : function(d, i) {
+				console.log("onclick", d, i);
+			},
+			onmouseover : function(d, i) {
+				console.log("onmouseover", d, i);
+			},
+			onmouseout : function(d, i) {
+				console.log("onmouseout", d, i);
+			}
+		},
+		gauge : {
+			label : {
+				format : function(value, ratio) {
+					return value; //returning here the value and not the ratio
+				},
+			},
+			min : 0,
+			max : 200,
+			units : '', //this is only the text for the label
+			width : 15
+		},
+		color : {
+			pattern : [ '#8BBE3D' ], // the three color levels for the percentage values.
+
+		},
+		size : {
+			height : 155,
+			width : 150
+		}
+	});
+
+	var chart = c3.generate({
+		bindto : '#chart_3',
+		data : {
+
+			columns : [ [ 'data', 55 ] ],
+
+			type : 'gauge',
+			onclick : function(d, i) {
+				console.log("onclick", d, i);
+			},
+			onmouseover : function(d, i) {
+				console.log("onmouseover", d, i);
+			},
+			onmouseout : function(d, i) {
+				console.log("onmouseout", d, i);
+			}
+		},
+		gauge : {
+			label : {
+				format : function(value, ratio) {
+					return value; //returning here the value and not the ratio
+				},
+			},
+			min : 0,
+			max : 200,
+			units : '', //this is only the text for the label
+			width : 15
+		},
+		color : {
+			pattern : [ '#8BBE3D' ], // the three color levels for the percentage values.
+
+		},
+		size : {
+			height : 155,
+			width : 150
+		}
+	});
+
+	var chart = c3.generate({
+		bindto : '#chart_2',
+		data : {
+
+			columns : [ [ 'data', 60 ] ],
+
+			type : 'gauge',
+			onclick : function(d, i) {
+				console.log("onclick", d, i);
+			},
+			onmouseover : function(d, i) {
+				console.log("onmouseover", d, i);
+			},
+			onmouseout : function(d, i) {
+				console.log("onmouseout", d, i);
+			}
+		},
+		gauge : {
+			label : {
+				format : function(value, ratio) {
+					return value; //returning here the value and not the ratio
+				},
+			},
+			min : 0,
+			max : 200,
+			units : '', //this is only the text for the label
+			width : 15
+		},
+		color : {
+			pattern : [ '#8BBE3D' ], // the three color levels for the percentage values.
+
+		},
+		size : {
+			height : 155,
+			width : 150
+		}
+	});
+</script>
