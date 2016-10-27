@@ -177,9 +177,18 @@ public class DataIngestionServiceController
 
 	@Override
 	@RequestMapping(value = "/lastfivemindata/", method = RequestMethod.GET)
-	public String getLastOneHourData(@HeaderParam(value = "authorization")String authorization,@QueryParam("assetSerialId")String assetSerialId) {
+	public String getLastFiveMinData (@HeaderParam(value = "authorization")String authorization,@QueryParam("assetSerialId")String assetSerialId) {
 		return this.dataIngestionHandler.getLastFiveMinutesData(authorization, assetSerialId);
 	}
+
+	@Override
+	@RequestMapping(value = "/getdatafortimeframe/", method = RequestMethod.GET)
+	public String getTimeSeriesDataForTimePeriod(@HeaderParam(value = "authorization")String authorization, @QueryParam("assetSerialId") String assetSerialId,@QueryParam("timeStampFrom") Long timeStampFrom,
+			@QueryParam("timeStampTo")Long timeStampTo) {
+		return this.dataIngestionHandler.getDataForTimeFrame(authorization, assetSerialId, timeStampFrom, timeStampTo);
+	}
+
+		
 	
 	
 }

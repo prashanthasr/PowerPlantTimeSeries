@@ -3,7 +3,6 @@ C:\Users\1232979\workspace\TCS-Predix-EHS-master\srp-dataingestion-service\src\m
 C:\Users\1232979\workspace\TCS-Predix-EHS-master\srp-dataingestion-service\src\main\java\com\ge\predix\solsvc\dataingestion\websocket\WebSocketConfig.java
 C:\Users\1232979\workspace\TCS-Predix-EHS-master\srp-dataingestion-service\src\main\java\com\ge\predix\solsvc\dataingestion\boot\PredixBootSecurityConfig.java
 C:\Users\1232979\workspace\TCS-Predix-EHS-master\srp-dataingestion-service\src\main\java\com\ge\predix\solsvc\dataingestion\api\DataIngestionServiceAPI.java
-C:\Users\1232979\workspace\TCS-Predix-EHS-master\srp-dataingestion-service\src\main\java\com\ge\predix\solsvc\dataingestion\api\Constants.java
 C:\Users\1232979\workspace\TCS-Predix-EHS-master\srp-dataingestion-service\src\main\java\com\ge\predix\solsvc\dataingestion\service\CORSFilter.java
 C:\Users\1232979\workspace\TCS-Predix-EHS-master\srp-dataingestion-service\src\main\java\com\ge\predix\solsvc\dataingestion\vo\EHSObjectVO.java
 C:\Users\1232979\workspace\TCS-Predix-EHS-master\srp-dataingestion-service\src\main\java\com\ge\predix\solsvc\dataingestion\vo\AssetObject.java

@@ -1,6 +1,5 @@
 com\ge\predix\solsvc\dataingestion\vo\Point.class
 com\ge\predix\solsvc\dataingestion\service\DataIngestionServiceController.class
-com\ge\predix\solsvc\dataingestion\api\Constants.class
 com\ge\predix\solsvc\dataingestion\api\DataIngestionServiceAPI.class
 com\ge\predix\solsvc\dataingestion\service\type\JSONData.class
 com\ge\predix\solsvc\dataingestion\websocket\WebSocketConfig.class

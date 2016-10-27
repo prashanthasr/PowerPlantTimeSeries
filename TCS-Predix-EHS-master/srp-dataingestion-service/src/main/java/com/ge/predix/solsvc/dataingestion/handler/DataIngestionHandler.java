@@ -66,6 +66,11 @@ public class DataIngestionHandler
     {
     	return this.timeSeriesDataIngestionHandler.getLastFiveMinutesData(authorization,assetSerialId);
     }
+    
+    public String getDataForTimeFrame(String authorization, String assetSerialId,Long timeFrom, Long timeTo)
+    {
+    	return this.timeSeriesDataIngestionHandler.getDataForTimeFrame(authorization, assetSerialId,timeFrom, timeTo);
+    }
 
     /**
      * @return -

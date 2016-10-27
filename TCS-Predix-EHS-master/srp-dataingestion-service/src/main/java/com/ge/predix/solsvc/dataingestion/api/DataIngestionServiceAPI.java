@@ -52,7 +52,15 @@ public interface DataIngestionServiceAPI
     		);
     
     
-    public @ResponseBody String getLastOneHourData(
+    public @ResponseBody String getLastFiveMinData(
     		@RequestHeader(value = "authorization", required = false) String authorization,
     		@RequestParam(value="assetSerialId") String assetSerialId);
+    
+    public @ResponseBody String getTimeSeriesDataForTimePeriod(
+    		@RequestHeader(value = "authorization", required = false) String authorization,
+    		@RequestParam(value="assetSerialId") String assetSerialId, 
+    		@RequestParam(value="timeStampFrom") Long timeStampFrom,
+    		@RequestParam(value="timeStampTo") Long timeStampTo);
+
+	
 }

@@ -82,7 +82,7 @@ public class MachineDataSimulator {
         	
         	generateAndPushAssetDataForVoltage();
         	generateAndPushAssetDataForAmpere();
-        	generateAndPushAssetDataForStatus();
+        	//generateAndPushAssetDataForStatus();
         	     
 
         } catch (Throwable e) {
@@ -90,16 +90,28 @@ public class MachineDataSimulator {
         }
     }
     
-    private String[] assetTags = new String[]{"asset-900:voltage","asset-900:current","asset-900:status",
-    										"asset-901:voltage","asset-901:current","asset-901:status",
-    										"asset-902:voltage","asset-902:current","asset-902:status",
-    										"asset-903:voltage","asset-903:current","asset-903:status",
-    										"asset-904:voltage","asset-904:current","asset-904:status"
+    private String[] voltageAssetTags = new String[]{"asset-100:voltage",
+    										"asset-101:voltage",
+    										"asset-102:voltage",
+    										"asset-103:voltage",
+    										"asset-104:voltage"
     										};
     
-    private String getRandamAssetTag()
+    private String[] ampereAssetTags = new String[]{"asset-100:ampere",
+			"asset-101:ampere",
+			"asset-102:ampere",
+			"asset-103:ampere",
+			"asset-104:ampere"
+			};
+    
+    private String getRandamVoltageAssetTag()
     {
-    	return assetTags[rand.nextInt(assetTags.length)];
+    	return voltageAssetTags[rand.nextInt(voltageAssetTags.length)];
+    }
+    
+    private String getRandamAmpereAssetTag()
+    {
+    	return ampereAssetTags[rand.nextInt(ampereAssetTags.length)];
     }
     
     private String generateAndPushAssetDataForVoltage() throws JsonGenerationException, JsonMappingException, IOException {
@@ -109,7 +121,7 @@ public class MachineDataSimulator {
     	
     	List<AQIBody> aqiBodyList = new ArrayList<>();
     	
-    	AQIBody assetAreaBodyForVolts = getRandomPowerPlantData(currentTimeMillis, getRandamAssetTag(),"V");
+    	AQIBody assetAreaBodyForVolts = getRandomPowerPlantData(currentTimeMillis, getRandamVoltageAssetTag(),"V");
     	
     	aqiBodyList.add(assetAreaBodyForVolts);	
     	
@@ -134,7 +146,7 @@ public class MachineDataSimulator {
     	List<AQIBody> aqiBodyList = new ArrayList<>();
     	
     	//AQIBody assetAreaBodyForVolts = getRandomPowerPlantData(currentTimeMillis, getRandamAssetTag(),"V");
-    	AQIBody assetAreaBodyForCurrent = getRandomPowerPlantData(currentTimeMillis, getRandamAssetTag(),"A");
+    	AQIBody assetAreaBodyForCurrent = getRandomPowerPlantData(currentTimeMillis, getRandamAmpereAssetTag(),"A");
     	//AQIBody assetAreaBodyForStatus = getRandomPowerPlantData(currentTimeMillis, getRandamAssetTag(),"O");
     	
     	//AQIBody smtAreaBody = getRandomAQIDataVO(currentTimeMillis, getRandamAssetTag(), true); 
@@ -169,7 +181,7 @@ public class MachineDataSimulator {
     	
     	//AQIBody assetAreaBodyForVolts = getRandomPowerPlantData(currentTimeMillis, getRandamAssetTag(),"V");
     	//AQIBody assetAreaBodyForCurrent = getRandomPowerPlantData(currentTimeMillis, getRandamAssetTag(),"A");
-    	AQIBody assetAreaBodyForStatus = getRandomPowerPlantData(currentTimeMillis, getRandamAssetTag(),"O");
+    	//AQIBody assetAreaBodyForStatus = getRandomPowerPlantData(currentTimeMillis, getRandamAssetTag(),"O");
     	
     	//AQIBody smtAreaBody = getRandomAQIDataVO(currentTimeMillis, getRandamAssetTag(), true); 
     	//AQIBody prdGrndFlrBody = getRandomAQIDataVO(currentTimeMillis, "Production Ground Floor", true);
@@ -177,7 +189,7 @@ public class MachineDataSimulator {
     	
     	//aqiBodyList.add(assetAreaBodyForVolts);	
     	//aqiBodyList.add(assetAreaBodyForCurrent);
-    	aqiBodyList.add(assetAreaBodyForStatus);
+    	//aqiBodyList.add(assetAreaBodyForStatus);
     	
     	aqiObjVO.setBody(aqiBodyList);
     	aqiObjVO.setMessageId(currentTimeMillis);
@@ -485,17 +497,17 @@ public class MachineDataSimulator {
 	        switch(dataPointType)
 	        {
 		        case "V":{
-		        	datapoint.add((Object) (getRandVoltageArrayElement()+" volts"));
+		        	datapoint.add((Object) (getRandVoltageArrayElement()));
 		        	break;
 		        }
 		        case "A":{
-		        	datapoint.add((Object) (getRamdAmpsArray()+" ampere"));
+		        	datapoint.add((Object) (getRamdAmpsArray()));
 		        	break;
 		        }
-		        case "O":{
+		        /*case "O":{
 		        	datapoint.add((Object) ((getOnOffSensorData()==0)?"OFF":"ON"));
 		        	break;
-		        }
+		        }*/
 	        }
 	        
 	        
@@ -507,8 +519,8 @@ public class MachineDataSimulator {
 	        PowerPlantAssetAttribute ppAssetAttr = new PowerPlantAssetAttribute();
 	        
 	        String[] assetNameStr = bodyName.split(":");
-       
-	        ppAssetAttr.setAssetSerialId(assetNameStr[1]);
+            
+	        ppAssetAttr.setAssetSerialId(assetNameStr[0]);
 	        ppAssetAttr.setType("SolarPanel");
 	        switch(dataPointType)
 	        {
